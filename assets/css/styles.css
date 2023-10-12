@@ -147,3 +147,101 @@
 .filtro {
 	display: none;
 }
+
+/* estilos para el about us*/
+.header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('../img/encabezado.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 100px;
+	opacity: 0.7;
+}
+.history{
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	background-color: rgba(242, 219, 236, 0.6);
+}
+.pic{
+	width: 100%;
+	height: 500px;
+	border-radius: 20px;
+}
+.products {
+	width: 100%;
+	height: auto;
+    background-color: rgba(206, 226, 223, 0.86);
+    padding: 20px;
+	display: blo;
+    justify-content: center;
+	align-items: center;
+}
+
+.card {
+    border: none;
+    margin: 0; /* Elimina el margen predeterminado de las tarjetas */
+    width: 18rem;
+}
+
+.card-img-top {
+    height: 300px; /* Fija la altura de las imágenes para que tengan el mismo tamaño */
+    object-fit: cover; /* Evita que las imágenes se deformen */
+}
+
+.card-body {
+    background-color: #fff; /* Cambia el color de fondo del cuerpo de la tarjeta */
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #777;
+}
+.mision-vision {
+	background-color: rgb(248, 229, 216);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+	padding: 20px;
+}
+
+.mision-vision-box {
+    background-color: #f0f0f0;
+	margin-top: 20px;
+    padding: 20px;
+    width:100%;
+	border-radius: 15px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.mision-vision-box:hover {
+    opacity: 0.8;
+}
+.social-icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#map{
+	width: 100%;
+	height: 300px;
+	margin-bottom: 10px;
+}
+.icon{
+	width: 100px;
+}
+i{
+	font-size: 2rem;
+}
