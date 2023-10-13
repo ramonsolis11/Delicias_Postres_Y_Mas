@@ -39,12 +39,12 @@
 	justify-content: flex-end;
 	padding: 30px;
 	height: 600px;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url(./title04.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/title04.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 80%;
 	color: white;
+    border-bottom: 5px solid #b2744c;
 }
 
 .description {
@@ -244,4 +244,47 @@
 }
 i{
 	font-size: 2rem;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 992px) {
+    .product-header {
+        height: 300px;
+    }
+
+    .description{
+        font-size: 1.5em;
+    }
+    #filter{
+        display: none;
+    }
+    .titulo{
+        font-size: 3rem;
+    }
+    #menu {
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .product-header {
+        height: 150px;
+    }
+    .description{
+        display: none;
+    }
+    .titulo{
+        font-size: 2rem;
+    }
+    .title h2{
+        font-size: 1.5rem;
+    }
+    #menu {
+
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }
