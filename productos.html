@@ -9,58 +9,108 @@
     <!-- Google Fonts -->
 
     <!-- Bootstrap -->
-    
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous" />
+
     <!-- CSS -->
-    
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
-<body>
-    
-    <!-- Encabezado (Header) -->
+<body class="bg-color01">
+
     <header>
-        <!-- Barra de navegación de Bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Repostería Delicia Postres y Más</a>
-            <!-- Agregar el menú de navegación  -->
+        <nav class="navbar navbar-expand-md bg-color02">
+            <div class="container-fluid">
+            <a class="navbar-brand ft-color02" href="#">Repostería Delicia Postres y Más</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+                <a class="nav-link ft-color02" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft-color02" aria-current="page" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft-color02" aria-current="page" href="./servicios.html">Nuestros Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft-color02" aria-current="page" href="./productos.html">Catálogo de Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft-color02" aria-current="page" href="./contacto.html">Contáctanos</a>
+            </li>
+            </ul>
+            </div>
+            </div>
         </nav>
+
+        <div class="product-header">
+            <div class="textBox ">
+                <p class="description">
+                    Descubre, saborea y enamórate de nuestras creaciones. <br> Te encuentras en el lugar perfecto para complacer <br> ese capricho dulce que buscas.
+                </p>
+            </div>
+        </div>
+        <section>
+            <p class="titulo ft-color01">Nuestros productos</p>
+        </section>
     </header>
 
-    <!-- Contenido de la página Productos -->
-    <div class="container mt-4">
-        <h1>Nuestros Productos</h1>
-        <p>En Delicia postres y más, ofrecemos una amplia gama de productos deliciosos que seguramente te encantarán. Nuestros productos incluyen:</p>
-        
-        <!-- Catálogo de productos -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="producto1.jpg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción del Producto 1.</p>
-                        <a href="#" class="btn btn-primary">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="producto2.jpg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 2</h5>
-                        <p class="card-text">Descripción del Producto 2.</p>
-                        <a href="#" class="btn btn-primary">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Agrega más tarjetas de productos según sea necesario -->
-        </div>
-    </div>
+		<main>
+			<section id="filter"></section>
+			<section id="recomendato"></section>
+			<section>
+
+				<div class="title">
+					<h2 class="ft-color01">&#x1F661; Menu &#x1F663;</h2>
+				</div>
+
+				<div class="container mb-5 text-end" >
+					<input
+						type="text"
+						id="text"
+						class="form-control"
+						placeholder="Producto"/>
+						<small class="text-secondary">Escriba el nombre de su producto favorito</small>
+
+				</div>
+
+
+			</section>
+			<section id="menu" class="container"></section>
+
+			<!-- JavaScript -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+				crossorigin="anonymous"></script>
+			<script src="./assets/js/db.js"></script>
+		</main>
 
         <!-- Footer -->
-        <footer class="bg-light mt-4">
-            <div class="container">
-                <!-- Contenido aquí -->
-            </div>
-        </footer>
+		<footer class="mt-5 pt-5" id="footer">
+			<div class="footer-logo text-center">
+				<!-- <img src="#" alt="Logo"> -->
+			</div>
+			<div class="socail-links text-center">
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				<a href="#"><i class="fa-brands fa-youtube"></i></a>
+				<a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+			</div>
+			<div class="footer-info text-center">
+				<p>&copy; 2023 Delicias, postres y más. Todos los derechos reservados.</p>
+				<p>Dirección: Calle de los Sabores, 123, Ciudad Dulce</p>
+				<p>Teléfono: (123) 456-7890</p>
+				<p>Correo: info@deliciaspostres.com</p>
+			</div>
+		</footer>
 
 </body>
 <!-- scripts de JavaScript / Bootstrap -->
