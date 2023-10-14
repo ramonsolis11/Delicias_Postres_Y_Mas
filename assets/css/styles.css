@@ -245,3 +245,17 @@
 i{
 	font-size: 2rem;
 }
+
+.text-carousel{
+	font-family: "Poppins", sans-serif;
+	color:#9E492B
+}
+
+.carrousel-inner img {
+    height: 850px;
+    object-fit: cover;
+}
+
+.text-navbar{
+	font-family: "Poppins", sans-serif;
+}
