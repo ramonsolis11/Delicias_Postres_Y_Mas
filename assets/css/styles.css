@@ -286,7 +286,7 @@ i{
 	margin-top: 10px;
 	padding: 100px;
 }
- .contenedor{
+.contenedor{
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -294,8 +294,8 @@ i{
 	align-items: center;
 	flex-flow: row wrap;
 	margin: 50px 0 50px 50px;
- }
- .contenedor figure{
+}
+.contenedor figure{
 	position: relative;
 	height: 250px;
 	width: 350px;
@@ -527,7 +527,7 @@ i{
 }
 
 .container-review {
-    --d: 15s;
+    --d: 25s;
   /* duration */
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -547,17 +547,22 @@ i{
     border-inline: 10px solid #0000;
     animation: r var(--d) linear infinite; 
     border-radius: 10%;
+	height: 100%;
 }
     
 .container-review > div img {
     width: 100%;
+	height: 100%;
+	object-fit: cover;
     grid-row: span 2; 
     border-radius: 10%;
     
 }
 
 .container-review > div * {
-    margin: 0; }
+    margin: 0;
+	height: 100%;
+}
 
 .container-review > div h3 {
     margin-top: auto; }
