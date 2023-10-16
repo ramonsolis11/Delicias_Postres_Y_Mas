@@ -282,6 +282,11 @@ i{
 }
 
 /* estilos de servicios */
+.container1 {
+	background-color: #fef7e5;
+	margin-top: 10px;
+	padding: 100px;
+}
  .container{
 	width: 100%;
 	height: 100vh;
@@ -359,6 +364,87 @@ i{
 	color: #e2781a;
 	font-family: "Poppins", sans-serif;
  }
+ /*variedades*/
+ .variedades {
+ 	display: flex;
+ 	justify-content: space-around;
+ 	flex-wrap: wrap;
+
+ }
+
+ .variedades .variedad-servicios {
+ 	flex-basis: 30%;
+ 	margin: 10px;
+ 	padding: 20px;
+ 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0px 15px 25px rgba(0, 0, 0, 50);
+ }
+
+ .variedades .variedad-servicios img {
+ 	width: 100%;
+ 	height: auto;
+ 	border-radius: 10px;
+ 	margin-bottom: 10px;
+ }
+
+ .variedades .variedad-servicios h2 {
+ 	margin-top: 30px;
+ 	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #e2781a;
+	font-size: 1rm;
+	font-weight: 900;
+ }
+
+ .variedades .variedad-servicios p {
+ 	width: 100%;
+ 	text-align: center;
+	white-space: normal;
+	font-size: 15px;
+	line-height: 20px;
+	max-width: 220px;
+	color: black;
+	font-family: "Poppins", sans-serif;
+ }
+/*media query servicios*/
+/* Para pantallas de tamaño pequeño y superior */
+@media only screen and (min-width: 600px) {
+	.container {
+		flex-direction: row;
+	}
+
+	.variedades .variedad-servicios {
+		flex-basis: 100%;
+	}
+}
+
+/* Para pantallas de tamaño mediano y superior */
+@media only screen and (min-width: 768px) {
+	.container {
+		flex-direction: row;
+	}
+
+	.variedades .variedad-servicios {
+		flex-basis: 100%;
+	}
+}
+
+/* Para pantallas de tamaño grande y superior */
+@media only screen and (min-width: 992px) {
+	.container {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.variedades .variedad-servicios {
+		flex-basis: 30%;
+	}
+}
 
 /* responsive */
 
@@ -401,14 +487,15 @@ i{
         grid-template-columns: 1fr;
         gap: 10px;
     }
-	.container{
+	.container {
 		flex-direction: column;
 		align-items: center;
 		margin: 50px 0;
 	}
-	.container figure{
+	
+	.container figure {
 		margin-bottom: 30px;
-        align-items: center;
-	}
+		align-items: center;
+	
 }
 
