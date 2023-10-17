@@ -206,17 +206,26 @@
 
 .card {
     border: none;
-    margin: 0; /* Elimina el margen predeterminado de las tarjetas */
+    margin: 0; 
     width: 18rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
 }
 
 .card-img-top {
-    height: 300px; /* Fija la altura de las imágenes para que tengan el mismo tamaño */
-    object-fit: cover; /* Evita que las imágenes se deformen */
+    height: 300px; 
+    object-fit: cover; 
+	max-width: 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 .card-body {
-    background-color: #fff; /* Cambia el color de fondo del cuerpo de la tarjeta */
+    background-color: #fff; 
+	padding: 20px;
 }
 
 .card-title {
@@ -226,6 +235,10 @@
 .card-text {
     font-size: 14px;
     color: #777;
+}
+
+.card:hover {
+	transform: scale(1.05);
 }
 .mision-vision {
 	/* background-color: rgb(248, 229, 216); */
