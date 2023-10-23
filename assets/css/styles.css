@@ -4,15 +4,8 @@
 /* el estilo de la fuente se aplica con: 
     font-family: 'Poppins', sans-serif;
         para titulos grandes: font-weight: 900;
- */
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-}
-
+/* ?------INICIO SECCION DE USO GENERAL------------*/
 /* Color de los fondos */
 .bg-color01 {
 	/* se usa para el fondo de la pagina */
@@ -37,7 +30,6 @@
 .brand-logo{
 	width: 40px;
 	margin-left: 20px;
-
 }
 
 .brand-text{
@@ -45,6 +37,13 @@
 	font-size: 1.5em;
 	margin: 10px;
 }
+
+.container_product{
+    margin: 0% 10% 0% 10% ;
+}
+/* ?------FIN SECCION DE USO GENERAL------------*/
+
+/**-------------------INICIO DE PAGINA DE PRODUCTOS--------*/
 .product-header {
 	display: flex;
 	align-items: center;
@@ -68,9 +67,9 @@
 .titulo {
 	text-align: center;
 	font-family: "Poppins", sans-serif;
-	font-weight: 900;
-	margin: 100px;
-	font-size: 8rem;
+	font-weight: 600;
+	margin: 30px;
+	font-size: 4rem;
 }
 
 #filter {
@@ -137,7 +136,7 @@
 }
 
 .contenido{
-	padding: 0 100px;
+	padding: 0 30px;
 }
 
 .dessert {
@@ -164,392 +163,176 @@
 .filtro {
 	display: none;
 }
+/**-------------------FIN DE PAGINA DE PRODUCTOS--------*/
 
-/* estilos para el about us*/
-.header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: url('../img/encabezado.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	padding: 100px;
-	opacity: 0.7;
-}
-.history{
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
-	width: 100%;
-	height: auto;
-	/* background-color: rgba(242, 219, 236, 0.6); */
-	background-color: #fef7e5;
-}
-.pic{
-	width: 100%;
-	height: 500px;
-	border-radius: 20px;
-}
-.products {
-	width: 100%;
-	height: auto;
-    /* background-color: rgba(206, 226, 223, 0.86); */
-    background-color: #fef7e5;
-    padding: 20px;
-	display: blo;
-    justify-content: center;
-	align-items: center;
+
+/**---------INICIO PAGINA DE INDEX (NAVBAR Y TESTIMONIOS)------------------*/
+/*Estilo para el carousel*/
+.text-carousel_desig{
+    background-color: rgba(90, 43, 5, 0.356);
 }
 
-.card {
-    border: none;
-    margin: 0; 
-    width: 18rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    margin-bottom: 20px;
+.carousel_desig{
+    margin-top: 8px;
 }
 
-.card-img-top {
-    height: 300px; 
-    object-fit: cover; 
-	max-width: 100%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+/* Estilo personalizado para el navbar */
+.navbar {
+    background-color: #B2744C;
 }
 
-.card-body {
-    background-color: #fff; 
-	padding: 20px;
+.navbar01 .navbar-brand01 {
+    color: #fff; /* Cambia el color del texto del logo a blanco */
+    transition: 0.3s; /* Agrega una transición suave al color del logo al pasar el mouse por encima */
 }
 
-.card-title {
-    font-weight: bold;
+.navbar01 .navbar-brand01:hover {
+    color: #fc6c05; /* Cambia el color del logo al pasar el mouse por encima */
 }
 
-.card-text {
-    font-size: 14px;
-    color: #777;
+.navbar-nav01 .nav-link01 {
+    color: #fff; /* Cambia el color del texto de los enlaces a blanco */
+    transition: 0.3s; /* Agrega una transición suave al color de los enlaces al pasar el mouse por encima */
+    padding: 5px 15px; /* Agrega espacio alrededor de los enlaces */
+    border-radius: 5px; /* Añade bordes redondeados a los enlaces */
 }
 
-.card:hover {
-	transform: scale(1.05);
+.navbar-nav01 .nav-link01:hover {
+    color: #fc6c05; /* Cambia el color de los enlaces al pasar el mouse por encima */
+    background-color: #fff; /* Cambia el fondo de los enlaces al pasar el mouse por encima */
+    transition: 0.3s; /* Agrega una transición suave */
 }
-.mision-vision {
-	/* background-color: rgb(248, 229, 216); */
-	background-color: #fef7e5;
+
+.navbar1,
+.navbar-burger,
+.menu1,
+.background {
+    position: fixed;
+}
+/*esta parte de background se relaciona con el fondo de la pagina*/
+.background {
+    z-index: 1;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    /*background-image: url("/Asset/img/bg.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    transition: 0.5s;
+}
+/* crea la difuminacion de la imagen de fondo de la pagina*/
+body.open .background {
+    filter: blur(10px);
+}
+
+/* Estilo por defecto para pantallas grandes */
+.menu-links {
     display: flex;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar1 {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 0;
-	padding: 20px;
+    width: 100%;
+    height: 72px;
+    padding-left: 20px;
+    padding-right: 72px;
+    background-color: #b2744c;
 }
 
-.mision-vision-box {
-    background-color: #f0f0f0;
-	margin-top: 20px;
-    padding: 20px;
-    width:100%;
-	border-radius: 15px;
-    border: 1px solid #ccc;
-    transition: 0.3s;
+.navbar-burger {
+    z-index: 3;
+    right: -10px;
+    left: auto;
+    top: -17px;
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    background-image: url("/assets/img/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
 }
 
-.mision-vision-box:hover {
-    opacity: 0.8;
-}
-.social-icons{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-#map{
-	width: 100%;
-	height: 300px;
-	margin-bottom: 10px;
-}
-.icon{
-	width: 100px;
-}
-i{
-	font-size: 2rem;
+body.open .navbar-burger  {
+    background-image: url("/assets/img/close.svg");
 }
 
-.text-carousel{
-	font-family: "Poppins", sans-serif;
-	color:#9E492B
+.menu1{
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    border-bottom: 20px solid white;
+    transition: 0.5s;
 }
 
-.carrousel-inner img {
-    height: 850px;
-    object-fit: cover;
+body.open .menu1 {
+    opacity: 1;
+    visibility: visible;
 }
 
-.text-navbar{
-	font-family: "Poppins", sans-serif;
+.menu1 nav:hover a {
+    opacity: 0.25;
 }
 
-/* estilos de servicios */
-.contenedor1 {
-	background-color: #fef7e5;
-	margin-top: 10px;
-	/*padding: 100px;*/
+.menu1 nav a:hover {
+    opacity: 1;
 }
 
-.contenedor {
-	width: 100%;
-	/*height: 100vh;*/
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-flow: row wrap;
-	margin: 50px 0 50px 50px;
+.menu1 nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.contenedor figure {
-	position: relative;
-	height: 250px;
-	width: 350px;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 0px 15px 25px rgba(0, 0, 0, 50);
-	cursor: pointer;
+.menu1 a {
+    position: relative;
+    color: #f9f9f9;
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+    padding: 20px 0;
+    width: 300px;
+    text-decoration: none;
+    transition: 0.4s;
 }
 
-.contenedor figure img {
-	width: 100%;
-	height: 100%;
-	transition: all 500ms ease-out;
+.menu1 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: #f7f7f7;
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+    transition: 0.4s;
 }
 
-.contenedor figure .capa {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(226, 120, 26, 0.5);
-	transition: all 500ms ease-out;
-	opacity: 0;
-	visibility: hidden;
-	text-align: center;
+.menu1 a:hover::after {
+    transform: scaleX(1);
 }
 
-.contenedor figure:hover>.capa {
-	opacity: 1;
-	visibility: visible
-}
-
-.contenedor figure:hover>.capa h3 {
-	margin-top: 70px;
-	margin-bottom: 15px;
-}
-
-.contenedor figure:hover>img {
-	transform: scale(1.3);
-}
-
-.contenedor figure .capa h3 {
-	color: #fff;
-	font-weight: 900;
-	margin-bottom: 120px;
-	transition: all 500ms ease-out;
-	margin-top: 30px;
-}
-
-.contenedor figure .capa p {
-	font-size: 15px;
-	line-height: 1.5;
-	width: 100%;
-	max-width: 220px;
-	margin: auto;
-	font-family: "Poppins", sans-serif;
-	color: #fff;
-}
-
-h1 {
-	font-weight: 900;
-	text-align: center;
-	margin: auto;
-	color: #e2781a;
-}
-
-.superior {
-	color: #e2781a;
-	font-family: "Poppins", sans-serif;
-	text-align: center;
-}
-
-.inferior {
-	margin-top: 50px;
-	color: #e2781a;
-	font-family: "Poppins", sans-serif;
-}
-
-/*variedades*/
-.variedades {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	margin-top: 100px;
-
-}
-
-.variedades .variedad-servicios {
-	flex-basis: 30%;
-	margin: 10px;
-	padding: 20px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	box-shadow: 0px 15px 25px rgba(0, 0, 0, 50);
-}
-
-.variedades .variedad-servicios img {
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
-	margin-bottom: 10px;
-}
-
-.variedades .variedad-servicios h2 {
-	margin-top: 30px;
-	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	color: #e2781a;
-	font-size: 1rm;
-	font-weight: 900;
-}
-
-.variedades .variedad-servicios p {
-	width: 100%;
-	text-align: center;
-	white-space: normal;
-	font-size: 15px;
-	line-height: 20px;
-	max-width: 220px;
-	color: black;
-	font-family: "Poppins", sans-serif;
-}
-
-/*media query servicios*/
-/* Para pantallas de tamaño pequeño y superior */
-@media only screen and (min-width: 768px) {
-	.contenedor1 {
-		padding: 0;
-		margin: 0;
-	}
-
-	.contenedor {
-		flex-direction: row;
-		display: flex;
-		justify-content: space-around;
-		padding: 0;
-		margin: 0;
-		margin-bottom: 30px;
-
-	}
-
-	.contenedor figure {
-		width: 20em;
-		height: 20em;
-		display: flex;
-		margin: 20px;
-		justify-content: space-between;
-	}
-
-	.variedades .variedad-servicios {
-
-		flex-basis: 100%;
-	}
-
-	.variedades {
-		margin: 30px;
-	}
-}
-
-/* Para pantallas de tamaño mediano y superior */
-/*@media only screen and (min-width: 768px) {
-	.contenedor {
-		flex-direction: row;
-		display: flex;
-		justify-content: space-around;
-	}
-
-	.variedades .variedad-servicios {
-		flex-basis: 100%;
-	}
-}*/
-
-/* Para pantallas de tamaño grande y superior */
-@media only screen and (min-width: 992px) {
-	.contenedor {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.variedades .variedad-servicios {
-		flex-basis: 30%;
-	}
-}
-
-/* responsive */
-
-@media only screen and (max-width: 992px) {
-    .product-header {
-        height: 300px;
-    }
-
-    .description{
-        font-size: 1.5em;
-    }
-    #filter{
-        display: none;
-    }
-    .titulo{
-        font-size: 3rem;
-    }
-    #menu {
-
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .product-header {
-        height: 150px;
-    }
-    .description{
-        display: none;
-    }
-    .titulo{
-        font-size: 2rem;
-    }
-    #title h2{
-        font-size: 1.5rem;
-    }
-    #menu {
-
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-	.container {
-		flex-direction: column;
-		align-items: center;
-		margin: 50px 0;
-	}
-	
-	.container figure {
-		margin-bottom: 30px;
-		align-items: center;
-	}
+body.open .menu1 a {
+    animation: appear 0.3s backwards;
 }
 
 /* Testimonios section */
@@ -622,4 +405,308 @@ h1 {
     transform: translate(-100%); }
     16.67667% {
     transform: translate(500%); } }
+/**----------------FIN PAGINA DE INDEX (NAVBAR Y TESTIMONIOS)----------------*/
 
+
+/**---INICIO DE PAGINA SERVICIOS Y  SECCION DE FLIP CARD---*/
+/*-------CONTAINER FOR ALL CARDS---------*/
+.cards-container{
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: cover;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+/*-----------ALL CARDS-------------------*/
+.flip-card{
+    width: 330px;
+    height: 400px;
+    border-radius: 20px;
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    transform-style: preserve-3d; /* hace que la imagen colocada cambie a la otra cuando gire la card 
+    si fuera flat la card girara con la imagen es decir se veria la misma imagen */
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover{
+    cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*oculta lo que hay de la otra cara de la card*/
+}
+/*---------CONTENT STYLING---------------*/
+.flip-card-front, .flip-card-back{
+    display: grid;
+    place-items: center;
+}
+
+.flip-card-front{ /*esto es para como se ve el lado front de la card*/
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(151, 149, 149, 0.466); /*le agrega un borde a la carta*/
+    border-radius: 10px;
+}
+
+
+.flip-card-back{ /*esto es para como se ve la parte de atras de la card*/
+    background: linear-gradient(#fffdfd, #fafafa);
+    transform: rotateY(180deg); /*esto hace q la imagen regrese a su posicion original cuando quito el cursor*/
+    box-shadow: 10px 10px 10px lightgray;
+    border-radius: 10px;
+}
+.flip-card-front img{
+    width: 100%;
+	height: 100%;  /* Agrega esta línea */
+    object-fit: cover;  /* Asegura que la imagen se ajuste adecuadamente sin distorsionarse */
+    border-radius: 10px;
+}
+
+.flip-card-back p {
+    font-size: 1.1em;  /* Ajusta según tu preferencia */
+    overflow: auto;  /* Agrega barras de desplazamiento si el texto es demasiado largo */
+    margin: 10px;  /* Añade margen para dar espacio alrededor del texto */
+    padding: 10px; /* O usa padding si prefieres */
+	font-family: "Poppins", sans-serif;
+	color: #b2744c
+}
+/**---------FIN DE PAGINA SERVICIOS Y SECCION FLIP CARD------*/
+
+/**--------INICIO DE SECCION DEL FOOTER---------*/
+footer {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos específicos para los íconos de redes sociales (estos son ejemplos y necesitas íconos reales) */
+.facebook-icon:before {
+    content: '\f09a'; /* Este es solo un ejemplo, necesitas los códigos Unicode de los íconos que quieras usar. */
+}
+/**---------FIN DE SECCION DEL FOOTER---------*/
+
+
+/** --------INICIO PAGINA DE CONTACTOS-----------*/
+.contact-info p {
+    margin: 8px 0;
+}
+.main_desig{
+    background-color: #f1f1f1;
+}
+.contact p{
+    color: white;
+    font-size: 1.rem;
+    font-family: "Poppins", sans-serif;
+}
+.contact a{
+        text-decoration: none;
+}
+#contact_form .form-input {
+	border: 1px solid #e4e4e4;
+}
+input {
+	height: 42px;
+	padding: 0 1rem;
+	background: #fff;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	border:0;
+}
+#contact_form textarea {
+	resize: none;
+	padding: 1rem;
+	height: 150px;
+	background: #fff;
+	border: 0;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.btn-grad {
+    padding: .7rem 2rem;
+	display: inline-block;
+	color: #fff;
+	border-radius: 2rem;
+	border: 0;
+	background: #fcbc91 ;
+	background: linear-gradient(to left, #fcbc91, #b2744c);
+	cursor:pointer;
+}
+.contact-info {
+	padding: 2rem 2rem 1rem;
+	border-radius: 8px;
+	background: #fcbc91;
+	background: linear-gradient(to left, #fcbc91, #b2744c);
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+}
+
+.contact-item {
+	margin:23px 0px;
+}
+.contact-item i {
+	font-size: 20px;
+}
+.contact-item p {
+	line-height: 20px;
+	margin: 0;
+}
+/**-----FIN DE PAGINA DE CONTACTOS-----*/
+
+/** --------Estilo pagina Nosotros-------*/
+.section_main {
+    background-image: url('../img/section_2.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: auto;
+    background-attachment: fixed;
+}
+.mision-vision-box{
+    background-color: rgba(143, 143, 143, 0.356);
+    border-radius: 10px;
+}
+.art_service{
+    background-color: rgba(143, 143, 143, 0.356);
+    border-radius: 15px;
+}
+
+
+/** --------Fin pagina Nosotros-------*/
+
+@keyframes appear {
+    0% {
+    opacity: 0;
+    translate: 0 50px;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+/* !---------INICIO SECCION DE MEDIA QUERYS DEL PROYECTO-------*/
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+    }
+
+    .navbar-burger {
+        display: block;
+    }
+}
+
+/* Estilos específicos para tabletas */
+@media (max-width: 1024px) {
+    .navbar1 {
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+    
+    .menu1 a {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .product-header {
+        height: 300px;
+    }
+
+    .description{
+        font-size: 1.5em;
+    }
+    #filter{
+        display: none;
+    }
+    .titulo{
+        font-size: 3rem;
+    }
+    #menu {
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .product-header {
+        height: 150px;
+    }
+    .description{
+        display: none;
+    }
+    .titulo{
+        font-size: 2rem;
+    }
+    #title h2{
+        font-size: 1.5rem;
+    }
+    #menu {
+
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+	.container {
+		flex-direction: column;
+		align-items: center;
+		margin: 50px 0;
+	}
+	
+	.container figure {
+		margin-bottom: 30px;
+		align-items: center;
+	}
+
+    .text-carousel_desig{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+    }
+
+    .navbar-burger {
+        display: block;
+    }
+}
+/* !---------FIN SECCION DE MEDIA QUERYS DEL PROYECTO-------*/
