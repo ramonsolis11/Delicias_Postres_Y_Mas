@@ -1,4 +1,5 @@
-![Alt text](<Imagen de WhatsApp 2023-10-21 a las 17.24.16_0d9b2e3b.jpg>)
+![Delicia Postres y Más](https://github.com/ramonsolis11/Delicias_Postres_Y_Mas/assets/80738178/cfa85f62-2bb2-43a4-908d-197ee6b6ab5e)
+
 
 Repostería Delicia Postres y Más 🍰
 
